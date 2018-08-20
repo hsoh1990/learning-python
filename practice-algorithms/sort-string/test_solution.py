@@ -2,8 +2,9 @@ import unittest
 
 
 def solution(strings, n):
-    answer = sorted(strings)
-    answer = sorted(answer, key=lambda answer: answer[n])
+    # answer = sorted(strings)
+    answer = []
+    answer = sorted(strings, key=lambda str: (str[n], str))
     return answer
 
 
