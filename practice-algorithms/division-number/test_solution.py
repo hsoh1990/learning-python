@@ -7,7 +7,8 @@ def solution(arr, divisor):
         if a % divisor == 0:
             answer.append(a)
             answer.sort()
-    if answer == []: answer.append(-1)
+    if not answer:
+        answer.append(-1)
 
     return answer
 
