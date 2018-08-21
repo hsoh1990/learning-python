@@ -1,16 +1,21 @@
 import unittest
 
 
-def solution(strings, n):
-    return sorted(strings, key=lambda str: (str[n], str))
+def solution(a, b):
+    if a > b:
+        a, b = b, a
+    return sum(range(a, b + 1))
 
 
 class Module1Test(unittest.TestCase):
     def testCase01(self):
-        self.assertEqual(solution(['sun', 'bed', 'car'], 1), ['car', 'bed', 'sun'])
+        self.assertEqual(solution(3, 5), 12)
 
     def testCase02(self):
-        self.assertEqual(solution(['abce', 'abcd', 'cdx'], 2), ['abcd', 'abce', 'cdx'])
+        self.assertEqual(solution(3, 3), 3)
+
+    def testCase03(self):
+        self.assertEqual(solution(5, 3), 12)
 
 
 if __name__ == '__main__':
