@@ -2,11 +2,8 @@ import unittest
 
 
 def solution(n):
-    answer = 0
-    li = sorted(str(n), reverse=True)
-    for i in li:
-        answer = answer * 10 + int(i)
-    return answer
+    answer = sorted(str(n), reverse=True)
+    return int(''.join(answer))
 
 
 class Module1Test(unittest.TestCase):
