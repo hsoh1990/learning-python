@@ -2,11 +2,9 @@ import unittest
 
 
 def solution(arr, divisor):
-    answer = []
-    for a in arr:
-        if a % divisor == 0:
-            answer.append(a)
-            answer.sort()
+    answer = list(filter(lambda num: not num % divisor, sorted(arr)))
+    arr = [x for x in arr if not x % divisor]
+    print(arr)
     if not answer:
         answer.append(-1)
 
