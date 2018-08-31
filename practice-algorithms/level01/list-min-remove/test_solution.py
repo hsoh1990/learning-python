@@ -7,10 +7,7 @@ def solution(arr):
     #     arr.append(-1)
     # return arr
 
-    answer = [i for i in arr if i > min(arr)]
-    if len(answer) == 0:
-        answer.append(-1)
-    return answer
+    return [i for i in arr if i > min(arr)]
 
 
 class Module1Test(unittest.TestCase):
