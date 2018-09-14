@@ -3,7 +3,7 @@ import unittest
 
 def solution(n):
     answer = ''
-    nums= ['1', '2', '4']
+    nums = ['1', '2', '4']
     quotient = -1
 
     while quotient != 0:
